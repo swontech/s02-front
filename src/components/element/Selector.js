@@ -39,8 +39,8 @@ const Selector = ({ options = [], ...props }) => {
                             {opt.desc}
                         </option>
                     ) : (
-                        <option key={idx} value={opt.code}>
-                            {opt.desc}
+                        <option key={idx} value={opt}>
+                            {opt}
                         </option>
                     )
                 ))}
