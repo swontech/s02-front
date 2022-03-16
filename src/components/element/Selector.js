@@ -26,7 +26,7 @@ const Container = styled.div`
     }
 `;
 
-const Selector = ({ options = [], disabledOptions = [], ...props }) => {
+const Selector = ({ options = [], ...props }) => {
     return (
         <Container>
             <select {...props}>
