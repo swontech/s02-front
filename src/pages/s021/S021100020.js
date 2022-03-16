@@ -18,7 +18,6 @@ import PostCodeModal from '../common/PostCodeModal';
 import useModal from '../../hooks/useModal';
 import {ReactComponent as SearchIcon} from '../../lib/images/SearchIcon.svg';
 import { emailDomainList, hpNoList } from '../../lib/staticData/data';
-import PageLabel from '../../components/element/PageLabel';
 
 //* 스타일드 컴포넌트
 const Container = styled.div`
@@ -121,8 +120,6 @@ const S021100020 = () => {
         
     return (
         <Container>
-            <PageLabel pageName="단체 등록" />
-
             {/* 단체 정보 입력 영역 */}
             <div className='org-wrapper'>
                 <div className='input-wrapper'>
