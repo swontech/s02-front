@@ -2,8 +2,8 @@ import GlobalStyle from './styles/GlobalStyles';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import S022200010 from "./views/S022200010";
-import Test from "./views/standard/reducertest";
+import S022200010 from "./pages/S022200010";
+import Test from "./pages/standard/reducertest";
 
 const App = ({ store }) => {
   return (

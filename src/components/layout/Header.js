@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import palette from "../../styles/palette";
-import HeaderAuths from "./HeaderAuths";
 
 const Container = styled.div`
     position: sticky;
@@ -30,7 +29,6 @@ const Header = () => {
             <div>
                 로고
             </div>
-            <HeaderAuths />
         </Container>
     );
 };
