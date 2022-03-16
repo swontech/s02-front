@@ -6,7 +6,7 @@ export const retrieveAPI = async (body) => {
     const targetUrl = "/api/s022200010/retrieve";
     // request.post(
     //     targetUrl,
-    //     body,
+    //     body,  
     // );
     try {
         const { data } = await axios.post(targetUrl, body);

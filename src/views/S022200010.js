@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { retrieveAPI } from "../api/s022/s022200010";
 import palette from "../styles/palette";
@@ -25,6 +26,7 @@ const S022200010 = () => {
 
     return (
         <Container onSubmit={onSubmitRetrieve}>
+            <Link to={"/test"} >테스트페이지로</Link>
             <button type="submit">검색</button> 
         </Container>
     );
