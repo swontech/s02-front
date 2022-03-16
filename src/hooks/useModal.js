@@ -8,7 +8,7 @@
  *  
  *  @last_modify    2022-03-15 MSH
  *  
-===================================================== */ 
+===================================================== */
 import React from "react";
 import { createPortal } from "react-dom";
 import styled from "styled-components";
@@ -49,14 +49,16 @@ const useModal = () => {
     };
 
     //* 모달 포탈
-    // pages컴포넌트에서 모달을 띄울 자식 컴포넌트를 props로 받아 root-modal에 띄운다.
     const ModalPortal = ({ children }) => {
         const ref = React.useRef();
+
+        // 마운트 상태
         const [mounted, setMounted] = React.useState(false);
 
         React.useEffect(() => {
             setMounted(true);
             if(document) {
+                // 전달받은 모달을 띄울 dom 
                 const dom = document.querySelector("#root-modal");
                 ref.current = dom;
             }
@@ -74,9 +76,7 @@ const useModal = () => {
         return null;
     };
 
-    //* props로 전달할 함수
-    return {
-        
+    return {  
         openModal,  
         closeModal,
         ModalPortal
