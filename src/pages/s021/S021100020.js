@@ -14,14 +14,11 @@ import React from 'react';
 import styled from 'styled-components';
 import Input from '../../components/element/Input';
 import Selector from '../../components/element/Selector';
-import PostCodeModal from '../../pages/standard/PostCodeModal';
+import PostCodeModal from '../common/PostCodeModal';
 import useModal from '../../hooks/useModal';
 import {ReactComponent as SearchIcon} from '../../lib/images/SearchIcon.svg';
 import { emailDomainList, hpNoList } from '../../lib/staticData/data';
 import PageLabel from '../../components/element/PageLabel';
-
-import axios from 'axios';
-import { registerOrgAPI } from "../../api/s021/s021100020API";
 
 //* 스타일드 컴포넌트
 const Container = styled.div`

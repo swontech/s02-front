@@ -13,7 +13,6 @@
 import React from 'react';
 import DaumPostcode from 'react-daum-postcode';
 import styled from 'styled-components';
-import useModal from '../../hooks/useModal';
 
 //* 스타일드 컴포넌트
 const Container = styled.div`
@@ -33,6 +32,8 @@ const style = {
 const PostCodeModal = ({ submitPostCode, closeModal }) => {
     const onCompleteHandler = (data) => {
         submitPostCode(data);
+
+        // 주소 데이터를 넘긴 후 모달창을 닫는다.
         closeModal();
     };
 
