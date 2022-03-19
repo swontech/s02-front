@@ -29,21 +29,25 @@ const Container = styled.div`
 const Selector = ({ options = [], ...props }) => {
     return (
         <Container>
-            <select {...props}>
+            <select {...props} >
                 <option value="" defaultChecked disabled>
                     선택
                 </option>
-                {options.map((opt, idx) => (
-                    typeof opt === Object ? (
+                {options && options.map((opt, idx) => {
+                    return <option key={idx} value={opt.code}>{opt.desc}</option>
+                })}
+                {/* {options.map((opt, idx) => (
+                    typeof opt === Object && (
                         <option key={idx} value={opt.code}>
                             {opt.desc}
                         </option>
-                    ) : (
-                        <option key={idx} value={opt}>
-                            {opt}
-                        </option>
                     )
-                ))}
+                    // : (
+                    //     <option key={idx} value={opt}>
+                    //         {console.log(opt)}
+                    //     </option>
+                    // )
+                ))} */}
             </select>
         </Container>
     )

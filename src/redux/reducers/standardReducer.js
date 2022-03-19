@@ -18,22 +18,3 @@ export const standardSlice = createSlice({
 
 export const { increament, decreament } = standardSlice.actions
 export default standardSlice.reducer
-
-// export default function standard(state = initialStates, action) {
-//     const { type } = action
-//     switch (type) {
-//         case standardAction.INCREASE_COUNT: {
-//             return {
-//                 ...state,
-//                 count: state.count + 1
-//             }
-//         }
-//         case standardAction.DECREASE_COUNT: {
-//             return {
-//                 ...state,
-//                 count: state.count - 1,
-//             }
-//         }
-//         default: return state
-//     }
-// }
