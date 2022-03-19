@@ -16,7 +16,7 @@ import PostCodeModal from '../common/PostCodeModal';
 import useModal from '../../hooks/useModal';
 import GroupView from './GroupView';
 import BossView from './BossView';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { groupRegistAction } from '../../redux/reducers/groupRegistReducer';
 
 //* 스타일드 컴포넌트
@@ -92,13 +92,10 @@ const S021100020 = () => {
             <GroupView />
             {/* 대표자 정보 입력 영역 */}
             <BossView />
-
             {/* 하단 버튼 영역 */}
             <div className='button-wrapper'>
                 <button type="button" onClick={onSubmitHandler}>저장</button>
             </div>
-
-
             {/* 모달 팝업 portal */}
             <ModalPortal>
                 <PostCodeModal

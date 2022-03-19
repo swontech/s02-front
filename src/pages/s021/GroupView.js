@@ -4,7 +4,7 @@ import Input from '../../components/element/Input';
 import Selector from '../../components/element/Selector';
 import useModal from '../../hooks/useModal';
 import { ReactComponent as SearchIcon } from '../../lib/images/SearchIcon.svg';
-import { emailDomainList, hpNoList } from '../../lib/staticData/data';
+import { hpNoList } from '../../lib/staticData/data';
 import { groupRegistAction } from '../../redux/reducers/groupRegistReducer';
 import { useDispatch, useSelector } from 'react-redux';
 
