@@ -1,11 +1,11 @@
-import * as action from "../../action/standardAction"
+import { increament, decreament } from "../../reducers/standardReducer"
 import { takeLatest, delay, put } from "redux-saga/effects";
 
 function* increaseCount() {
     yield delay(1000)
-    yield put(action.decreaseCount())
+    yield put(decreament())
 }
 
 export default function* standardSaga() {
-    yield takeLatest(action.INCREASE_COUNT, increaseCount)
+    yield takeLatest(increament.type, increaseCount)
 }
