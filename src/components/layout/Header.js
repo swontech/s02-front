@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import palette from "../../styles/palette";
+import palette from '../../styles/palette';
 
 const Container = styled.div`
     position: sticky;
@@ -21,13 +21,14 @@ const Container = styled.div`
             margin-right: 6px;
         }
     }
+    
 `;
 
 const Header = () => {
     return (
         <Container>
             <div>
-                로고
+                로고 123
             </div>
         </Container>
     );
