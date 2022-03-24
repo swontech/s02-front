@@ -36,8 +36,8 @@ const Selector = ({ options = [], ...props }) => {
                 {options && options.map((opt, idx) => {
                     return <option key={idx} value={opt.code}>{opt.desc}</option>
                 })}
-                {/* {options.map((opt, idx) => (
-                    typeof opt === Object && (
+                {options.map((opt, idx) => (
+                    typeof opt === "object" && (
                         <option key={idx} value={opt.code}>
                             {opt.desc}
                         </option>
@@ -47,7 +47,7 @@ const Selector = ({ options = [], ...props }) => {
                     //         {console.log(opt)}
                     //     </option>
                     // )
-                ))} */}
+                ))}
             </select>
         </Container>
     )
