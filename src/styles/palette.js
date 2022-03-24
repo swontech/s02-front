@@ -1,7 +1,7 @@
 export default palette = {
     blue: "#5068F2",
     blue2: "#3878e2",
-    bointRed: "#ff4169",
+    pointRed: "#ff4169",
     mint: "#30ceda",
     mint2: "32bea6",
     darkGreen: "#357400",
