@@ -1,4 +1,4 @@
-export default palette = {
+const palette = {
     blue: "#5068F2",
     blue2: "#3878e2",
     pointRed: "#ff4169",
@@ -12,3 +12,4 @@ export default palette = {
     white: "#ffffff",
     black: "#000000"
 };
+export default palette;
