@@ -44,8 +44,6 @@ const Container = styled.div`
         width:100%
     
     }
-
-    
 `;
 
 
@@ -55,16 +53,21 @@ const S021200010 = () => {
     const [email, setEmail] = React.useState("");
     const [pwd, setPwd] = React.useState("");
 
+    const onChangeEmail = (e) => { setEmail(e.target.value) };
+    const onChangePwd = (e) => { setPwd(e.target.value) };
+
     const hidePwdHandler = () => {
         setHidePwd(!hidePwd);
     };
 
-    const onClickLoginButton = () => {
+    const onClickLoginButton = async() => {
         const body = {
-            eamal: email,
+            email: email,
             pwd: pwd,
-        };
-        S021200010API.login(body);
+        }
+
+        const res = await S021200010API.login(body);
+        
     };
 
     return (
@@ -80,9 +83,13 @@ const S021200010 = () => {
                 </h1>
                 <Input 
                     type="text"
+                    value={email}
+                    onChange={onChangeEmail}
                     placeholder="아이디를 입력해주세요."
                 />
                 <Input 
+                    value={pwd}
+                    onChange={onChangePwd}
                     placeholder="비밀번호를 입력해주세요."
                     type={hidePwd ? "password": "text"}
                     icon={hidePwd ? <VisibleEyeIcon onClick={hidePwdHandler}/> : <InvisibleEyeIcon onClick={hidePwdHandler}/>}
