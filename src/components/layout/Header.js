@@ -25,13 +25,19 @@ const Container = styled.div`
 `;
 
 const Header = () => {
-    return (
-        <Container>
-            <div>
-                로고 123
-            </div>
-        </Container>
-    );
+    const routingPath = window.location.pathname;
+
+    if(routingPath === '/s021200010') {
+        return null;
+    } else {
+        return (
+            <Container>
+                <div>
+                    Header
+                </div>
+            </Container>
+        );
+    }
 };
 
 export default Header;

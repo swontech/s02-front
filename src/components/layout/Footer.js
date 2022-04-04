@@ -16,11 +16,17 @@ const Container = styled.div`
 `;
 
 const Footer = () => {
-    return (
-        <Container>
-            footer
-        </Container>
-    );
+    const routingPath = window.location.pathname;
+
+    if(routingPath === "/s021200010") {
+        return null;
+    } else {
+        return (
+            <Container>
+                footer
+            </Container>
+        );
+    }
 };
 
 export default Footer;
