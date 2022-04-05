@@ -1,47 +1,40 @@
-// import Axios, { AxiosResponse } from 'axios';
-
-// const instance = Axios.create({
-//     baseUrl: '/api',
-//     timeout: 1000,
-//     headers: {
-//         "Authorizaion": "Bearer ",
-//     },
-// });
-
-// const responseBody = (AxiosResponse) => AxiosResponse.data;
-
-// export const request = {
-//     get: (url) => instance.get(url).then(responseBody),
-//     post: (url, body) => instance.post(url, body).then(responseBody),
-//     put: (url, body) => instance.put(url, body).then(responseBody),
-//     delete: (url) => instance.delete(url).then(responseBody),
-// }
-
 import Axios from "axios";
+import jsCookie from "js-cookie";
 
-const request = Axios.create({
-    baseUrl: "/api"
+const instance = Axios.create({
+    baseURL: "/api/rest/v1",
+    headers: {
+        'Authorization': "Bearer ",
+    },
+    timeout: 3000,
+    withCredentials: true,
 });
 
-request.interceptors.request.use(
+/**
+ * axios interceptor
+ */
+instance.interceptors.request.use(
     config => {
-        return config
+        const token = jsCookie.get("ACCESS_TOKEN");
+        if(token !== undefined) {
+            config.headers.Authorization += token;
+        }
+        return config;
     },
     error => {
-        console.log(error)
+        // TODO[]: 에러 처리
         return Promise.reject(error);
     }
 );
 
-request.interceptors.response.use(
+instance.interceptors.response.use(
     response => {
-        const res = response.data;
-        return res;
+        return response;
     },
     error => {
-        console.log(error);
+        // TODO[]: 에러 처리
         return Promise.reject(error);
     }
 );
 
-export default request;
+export default instance;
