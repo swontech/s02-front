@@ -4,6 +4,7 @@ import Cookie from "js-cookie";
 const targetUrlPrefix = "/s021200010";
 export const S021200010API = {
     login: async(param) => {
+        // TODO: 예외 핸들링 추가
         const response = await api.get(targetUrlPrefix + '/login', {
             params: {
                 email: param.email,
