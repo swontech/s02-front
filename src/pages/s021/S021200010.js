@@ -61,13 +61,16 @@ const S021200010 = () => {
     };
 
     const onClickLoginButton = async() => {
-        const body = {
+        const param = {
             email: email,
             pwd: pwd,
         }
 
-        const res = await S021200010API.login(body);
-        
+        // TODO: 이후 로직 추가
+        const result = await S021200010API.login(param);
+        if(result === 200) {
+            alert("로그인에 성공했습니다.")
+        }
     };
 
     return (
