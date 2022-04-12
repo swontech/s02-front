@@ -15,6 +15,10 @@ body {
   font-family: "Apple SD Gothic Neo", "NotoSansKR", "NanumMyeongjo";
   font-size: 14px;
   color: #000;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
 }
 
 img {
@@ -35,11 +39,36 @@ a {
   clear: both;
 }
 
-body {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none
+.table {
+  margin-top: 30px;
+  border: 1.5px solid #333;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  height: 40%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.table_header {
+  font-weight: 500;
+  font-size: 16pt;
+  padding: 10px 0;
+  border-bottom: 1.5px solid #333;
+}
+
+.table_data {
+  padding: 15px 0;
+}
+
+.tr {
+  height: 30px;
+
+  &:hover {
+    &:not(:first-child) {
+      background-color: #dcdcdc;
+    }
+  }
 }
 
 .side_bar {
@@ -95,14 +124,6 @@ body {
   }
 }
 
-// .menu:hover .menu>a {
-//   background-color: rgb(117, 212, 196);
-// }
-
-// .menu:hover .submenu>li:hover a {
-//   color: rgb(25, 128, 111);
-// }
-
 .submenu {
   font-size: 0.8em;
   border-left: 1px solid white;
@@ -136,11 +157,11 @@ body {
 .top {
   display: flex;
   align-items: baseline;
-}
 
-h1 {
-  font-size: 3vw;
-  font-weight: 400;
+  h1 {
+    font-size: 3vw;
+    font-weight: 400;
+  }
 }
 
 .subTitle {
@@ -150,7 +171,7 @@ h1 {
   margin-left: 20px;
 }
 
-.user-wrap {
+.user_wrap {
   margin-left: auto;
   display: flex;
   align-items: center;
@@ -162,11 +183,12 @@ h1 {
   background-color: #ababab;
   border-radius: 100%;
   display: flex;
-}
 
-.userProfile>img {
-  justify-content: center;
-  align-items: center;
+  img {
+    justify-content: center;
+    align-items: center;
+  }
+
 }
 
 .userName {
@@ -222,84 +244,56 @@ h1 {
   font-size: 12px;
   position: relative;
 
+  p {
+    display: inline-block;
+    position: absolute;
+    top: 60%;
+    left: 30%;
+  }
+
+  img {
+    width: 40%;
+    position: absolute;
+    left: 15px;
+    top: 5px;
+  }
+
+  &:hover {
+    border: rgb(50, 190, 166) 1.5px solid;
+    background-color: rgb(50, 190, 166);
+    color: white;
+
+    img {
+      filter: brightness(1000);
+    }
+  }
+
+  &:active {
+    background-color: rgb(25, 128, 111);
+    border: 1px solid rgb(25, 128, 111);
+  }
 }
 
-.icons>p {
-  display: inline-block;
-  position: absolute;
-  top: 60%;
-  left: 30%;
+.deleteIcon {
+  img {
+    width: 35% !important;
+    left: 16px !important;
+  }
 }
 
-.icons>img {
-  width: 40%;
-  position: absolute;
-  left: 15px;
-  top: 5px;
-}
-
-.deleteIcon>img {
-  width: 35% !important;
-}
-
-.registIcon>img {
-  left: 17px !important;
-}
-
-.deleteIcon>img {
-  left: 16px !important;
-}
-
-.downloadIcon>p {
-  margin-left: -7px;
-  font-size: 8px !important;
+.registIcon {
+  img {
+    left: 17px !important;
+  }
 }
 
 .downloadIcon {
   margin-left: auto;
-}
 
-.icons:hover {
-  border: rgb(50, 190, 166) 1.5px solid;
-  background-color: rgb(50, 190, 166);
-  color: white;
-}
-
-.icons:hover img {
-  filter: brightness(1000);
-}
-
-.icons:active {
-  background-color: rgb(25, 128, 111);
-  border: 1px solid rgb(25, 128, 111);
-}
-
-table {
-  margin-top: 30px;
-  border: 1.5px solid #333;
-  border-left: none;
-  border-right: none;
-  width: 100%;
-  height: 40%;
-  text-align: center;
-  border-collapse: collapse;
-
-}
-
-th {
-  font-weight: 500;
-  font-size: 16pt;
-  padding: 10px 0;
-  border-bottom: 1.5px solid #333;
-
-}
-
-td {
-  padding: 15px 0;
-}
-
-tr:hover:not(:first-child) {
-  background-color: #dcdcdc;
+  p {
+    margin-left: -7px;
+    font-size: 8px !important;
+  }
 }
 
 .checkbox {
