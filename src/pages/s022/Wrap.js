@@ -6,7 +6,7 @@ import deletelogo from './img/deleteIcon.svg';
 const Wrap = () => {
     return (
         <div className={styles.wrap}>
-            <div className={styles.wrap}>
+            <div className={styles.inner}>
                 <div className={styles.top}>
                     <h1>단체관리</h1><p className={styles.subTitle}>이곳에서 새로 단체를 등록하거나 관리할 수 있습니다. </p>
                     <div className={styles.user_wrap}>
