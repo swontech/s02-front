@@ -7,13 +7,20 @@ import Test from "./pages/standard/reducertest";
 
 import S021100020 from "./pages/s021/S021100020";
 import S022200010 from "./pages/s022/S022200010";
+import styles from 'styled-components'
+
+const RootModal = styles.div`
+  font-family: "Apple SD Gothic Neo", "NotoSansKR", "NanumMyeongjo";
+  font-size: 14px;
+  color: #000;
+`
 
 const App = ({ store }) => {
   return (
     <>
       <GlobalStyle />
       <Header />
-      
+
       <Router>
         <Routes>
           <Route path="/" exact element={<S022200010 />} />
@@ -23,8 +30,8 @@ const App = ({ store }) => {
       </Router>
 
       <Footer />
-      
-      <div id="root-modal" />
+
+      <RootModal id="root-modal" />
     </>
   );
 }
